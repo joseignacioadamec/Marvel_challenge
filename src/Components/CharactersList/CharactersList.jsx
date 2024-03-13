@@ -4,6 +4,7 @@ import { Search } from '../Search/Search'
 import { AppContext } from '../../Context/AppContext'
 import { useNavigate } from 'react-router-dom'
 import { useFavorite } from '../../Hooks/useFavorite'
+import { navigateUniqueCharacter } from './utils/navigateUniqueCharacter'
 import imageFavoriteSelected from '../../assets/Images/image-favorite-selected.svg'
 import imageFavoriteUnselected from '../../assets/Images/image-favorite-unselected.svg'
 import './charactersList.css'
@@ -21,13 +22,7 @@ export const CharactersList = () => {
     data = state?.resultSearch
   }
 
-  // Funcion para redirigir a la vista de un ID en concreto
-  const navigateUniqueCharacter = (e, id) => {
-    if (id && e.target.className !== 'image-favorite') {
-      navigate(`/characterDetails/${id}`)
-    }
-  }
-
+  
   return (
     <>
       <Navbar setSearchText={setSearchText} />
@@ -42,7 +37,7 @@ export const CharactersList = () => {
       >
         {data?.map((data) => (
           <div
-            onClick={(e) => navigateUniqueCharacter(e, data.id)}
+            onClick={(e) => navigateUniqueCharacter(e, data.id, navigate)}
             key={data.id}
             className="container-characters"
           >

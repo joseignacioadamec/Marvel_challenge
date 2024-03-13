@@ -13,6 +13,12 @@ export default defineConfig(({ mode }) => {
         preventAssignment: true,
       }),
     ],
+    test: {
+      globals: true,
+      environment: 'jsdom',
+      setupFiles: './src/setupTests.js',
+      css: true,
+    },
     build: {
       minify: isProduction,
       rollupOptions: {

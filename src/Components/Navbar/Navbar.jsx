@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom'
 import marvelLogo from '../../assets/Images/marvel-logo.svg'
 import imageFavoriteSelected from '../../assets/Images/image-favorite-selected.svg'
 import imageFavoriteUnselected from '../../assets/Images/image-favorite-unselected.svg'
+import { navigateCharacters } from './utils/navigateCharacters'
+import { showFavorites } from './utils/showFavorites'
 import './navbar.css'
 
 export const Navbar = ({ setSearchText = null }) => {
@@ -13,30 +15,21 @@ export const Navbar = ({ setSearchText = null }) => {
   let resultImage =
     numbersFavorites !== 0 ? imageFavoriteSelected : imageFavoriteUnselected
 
-  const navigateCharacters = () => {
-    setState({ ...state, viewFavorites: false, resultSearch: state.data })
-    setSearchText && setSearchText('')
-    navigate(`/`)
-  }
-
-  const showFavorites = () => {
-    setState({
-      ...state,
-      viewFavorites: true,
-      resultSearch: state.favoritesArray,
-    })
-    setSearchText && setSearchText('')
-    navigate(`/`)
-  }
-
   return (
     <nav className="navbar-container">
-      <div onClick={navigateCharacters} className="logo-marbel">
+      <div
+        onClick={() =>
+          navigateCharacters(setState, state, setSearchText, navigate)
+        }
+        className="logo-marbel"
+      >
         <img src={marvelLogo} alt="" className="image-logo" />
       </div>
       <div className="favorite-navbar">
         <img
-          onClick={showFavorites}
+          onClick={() =>
+            showFavorites(setState, state, setSearchText, navigate)
+          }
           src={resultImage}
           alt=""
           className="favorite"
