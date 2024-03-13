@@ -12,11 +12,6 @@ Siga estos pasos para instalar la aplicación en su entorno local:
 
 1. Instalación de Dependencias: Ejecute `npm install`. Este comando descargará todas las dependencias necesarias para el proyecto en el directorio actual.
 2. Iniciar la Aplicación en modo desarrollo: Ejecute `npm run dev`. Con este comando, la aplicación está configurada para arrancar localmente y automáticamente en http://127.0.0.1:3000/
-3. Para ejecutar el script fotmat automáticamente, del archivo prettierrc, abre el archivo de configuración de VS Code (settings.json) y agrega la siguiente configuración:
-   "editor.formatOnSave": false,
-   "editor.codeActionsOnSave": {
-   "source.fixAll": true
-   },
-4. Aplicación en modo producción: Ejecute `npm run build`. Para realizar la traspilación, optimización, empaquetado y generación de archivos estáticos, una vez transpilado el proyecto, se puede probar si la transpilación ha sido correcta, ejecutando `npx http-server`, se ejecutará en http://192.168.1.33:8080
-5. Se han subido las variables de entorno, el archivo .env.local, debido a que son necesarias para que el proyecto funcione.
+3. Aplicación en modo producción: Ejecute `npm run build`. Para realizar la traspilación, optimización, empaquetado y generación de archivos estáticos, una vez transpilado el proyecto, se puede probar si la transpilación ha sido correcta, ejecutando `npx http-server`, se ejecutará en http://192.168.1.33:8080
+4. Se han subido las variables de entorno, el archivo .env.local, debido a que son necesarias para que el proyecto funcione.
    En circunstancias normales y reales, este archivo nunca se sube junto con el proyecto, debido a que las variables de entorno es una información sensible, debiendo cada usuario, crear manualmente el archivo .env, he incluir dichas variables, una vez clonado el proyecto.
