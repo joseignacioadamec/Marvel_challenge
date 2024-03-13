@@ -1,5 +1,2 @@
 export const Error = () => {
-  return (
-    <div>Error</div>
-  )
-}
+  return <div>Error</div>}

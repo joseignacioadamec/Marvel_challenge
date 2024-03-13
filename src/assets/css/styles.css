@@ -1,13 +1,13 @@
 :root {
-    --black-color: #000000;
-    --red-color: #EC1D24;
-    --white-color: white;
-  }
+  --black-color: #000000;
+  --red-color: #ec1d24;
+  --white-color: white;
+}
 
-  body {
-    font-family: "Roboto Condensed", sans-serif;
-  }
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+}
 
-  * {
-    box-sizing: border-box;
-  }
+* {
+  box-sizing: border-box;
+}
