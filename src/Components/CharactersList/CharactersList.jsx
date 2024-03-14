@@ -15,12 +15,10 @@ export const CharactersList = () => {
   const [searchText, setSearchText] = useState('')
   const { toggleFavorite } = useFavorite()
 
-  let data = state?.resultSearch
-  
   return (
     <>
       <Navbar setSearchText={setSearchText} />
-      {state.viewFavorites && <p className="text-favorites">FAVORITOS</p>}
+      {state.viewFavorites && <p className="text-favorites">FAVORITES</p>}
       <Search searchText={searchText} setSearchText={setSearchText} />
       <div
         className={
@@ -29,7 +27,7 @@ export const CharactersList = () => {
             : 'container-list'
         }
       >
-        {data?.map((data) => (
+        {state?.resultSearch?.map((data) => (
           <div
             onClick={(e) => navigateUniqueCharacter(e, data.id, navigate)}
             key={data.id}
