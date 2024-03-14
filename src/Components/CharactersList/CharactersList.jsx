@@ -15,13 +15,7 @@ export const CharactersList = () => {
   const [searchText, setSearchText] = useState('')
   const { toggleFavorite } = useFavorite()
 
-  let data
-  if (state.viewFavorites) {
-    data = state?.resultSearch
-  } else {
-    data = state?.resultSearch
-  }
-
+  let data = state?.resultSearch
   
   return (
     <>
