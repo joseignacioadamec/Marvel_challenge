@@ -121,7 +121,19 @@ header::after {
   }
 }
 
-@media screen and (max-width: 393px) {
+@media screen and (max-width: 392px) {
+
+  .text-favorites {
+    margin-left: 16px;
+  }
+  .container-list-favorites {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+  /* .container-characters {
+    width: 172.5px;
+
+} */
   .character-name-favorite {
     padding: 0;
   }

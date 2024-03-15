@@ -23,7 +23,7 @@ export const CharactersList = () => {
       <div
         className={
           state?.viewFavorites || state?.resultSearch?.length !== 50
-            ? 'container-list-favorites'
+            ? 'container-list-favorites container-images-comics'
             : 'container-list'
         }
       >
