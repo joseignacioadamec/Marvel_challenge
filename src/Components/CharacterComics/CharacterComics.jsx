@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { AppContext } from '../../Context/AppContext'
-import './characterComics.css'
 import { compareDates } from './utils/compareDates'
+import './characterComics.css'
 
 export const CharacterComics = () => {
   const { state } = useContext(AppContext)

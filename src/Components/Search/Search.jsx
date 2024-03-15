@@ -1,40 +1,16 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext } from 'react'
 import { AppContext } from '../../Context/AppContext'
+import { fetchDataSearch } from '../../helpers/fetchDataSearch'
 import iconSearch from '../../assets/Images/icon-search.svg'
 import './search.css'
 
-const apiKey = import.meta.env.VITE_API_KEY
-const apiHash = import.meta.env.VITE_API_HASH
-
 export const Search = ({ searchText, setSearchText }) => {
   const { state, setState } = useContext(AppContext)
-  const [data, setData] = useState([])
-
-  useEffect(() => {
-    if (state.viewFavorites) {
-      setData(state.favoritesArray)
-    } else {
-      setData(state.data)
-    }
-  }, [state])
 
   const handleChange = (event) => {
     const { value } = event.target
     setSearchText(value)
-
-    const fetchDataSearch = async () => {
-      try {
-        const res = await fetch(
-          `https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=${value}&ts=1&apikey=${apiKey}&hash=${apiHash}`,
-        )
-        const data = await res.json()
-        setState({ ...state, resultSearch: data.data.results })
-        return data
-      } catch (error) {
-        console.log('Error fetching data:', error)
-        return error
-      }
-    }
+   
     if (value !== '') {
       if (state.viewFavorites) {
         const results = state.favoritesArray.filter((item) =>
@@ -42,13 +18,13 @@ export const Search = ({ searchText, setSearchText }) => {
         )
         setState({ ...state, resultSearch: results })
       } else {
-        fetchDataSearch()
+        fetchDataSearch(value, setState, state)
       }
     } else {
       if (state.viewFavorites) {
         setState({ ...state, resultSearch: state.favoritesArray })
       } else {
-        setState({ ...state, resultSearch: state.data.results })
+        setState({ ...state, resultSearch: state.data })
       }
     }
   }

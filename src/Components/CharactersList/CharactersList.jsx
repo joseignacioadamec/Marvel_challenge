@@ -22,7 +22,7 @@ export const CharactersList = () => {
       <Search searchText={searchText} setSearchText={setSearchText} />
       <div
         className={
-          state.viewFavorites || state.resultSearch.length !== 50
+          state?.viewFavorites || state?.resultSearch?.length !== 50
             ? 'container-list-favorites'
             : 'container-list'
         }
