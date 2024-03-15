@@ -28,11 +28,6 @@ header::after {
   align-items: center;
 }
 
-.image-character {
-  max-width: 100%;
-  max-height: 100%;
-}
-
 .image-one-characters {
   width: 100%;
   height: 100%;
@@ -64,7 +59,7 @@ header::after {
   margin-top: 24px;
 }
 
-@media screen and (max-width: 835px) {
+@media screen and (min-width: 394px) and (max-width: 834px) {
   header {
     padding-left: 0px;
   }
@@ -76,6 +71,10 @@ header::after {
   .image-character {
     max-width: 278px;
     max-height: 278px;
+  }
+
+  .image-one-characters {
+    max-height: 279px;
   }
 
   .character-name {
@@ -97,6 +96,7 @@ header::after {
 @media screen and (max-width: 665px) {
   header {
     padding-right: 0;
+    padding-left: 0;
   }
   .container-generic-header {
     flex-wrap: wrap;
@@ -122,11 +122,6 @@ header::after {
 }
 
 @media screen and (max-width: 393px) {
-  .image-character {
-    max-width: 100%;
-    max-height: 100%;
-  }
-
   .character-name-favorite {
     padding: 0;
   }
