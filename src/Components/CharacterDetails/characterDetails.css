@@ -130,10 +130,7 @@ header::after {
     justify-content: flex-start;
     flex-wrap: wrap;
   }
-  /* .container-characters {
-    width: 172.5px;
 
-} */
   .character-name-favorite {
     padding: 0;
   }
