@@ -9,6 +9,7 @@ export const AppRoutes = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<CharactersList />} />
+        <Route path="/Marvel_challenge" element={<CharactersList />} />
         <Route path="/characterDetails/:id" element={<CharacterDetails />} />
         <Route path="*" element={<Error />} />
       </Routes>
