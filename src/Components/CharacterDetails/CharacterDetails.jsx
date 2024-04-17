@@ -61,8 +61,14 @@ export const CharacterDetails = () => {
                   onClick={() => toggleFavorite(data)}
                   src={
                     state.favoritesArray.some((item) => item.id === data.id)
-                      ? imageFavoriteSelected
-                      : imageFavoriteUnselected
+
+                    // ASI PARA LOCAL
+                      // ? imageFavoriteSelected
+                      // : imageFavoriteUnselected
+
+                      // ASI PARA PRO
+                      ? `.${imageFavoriteSelected}`
+                      : `.${imageFavoriteUnselected}`
                   }
                   alt="Corazon de favoritos"
                   className="character-favorite"

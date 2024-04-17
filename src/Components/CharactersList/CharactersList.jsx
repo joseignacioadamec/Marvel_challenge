@@ -48,8 +48,8 @@ export const CharactersList = () => {
                   onClick={() => toggleFavorite(data)}
                   src={
                     state.favoritesArray.some((item) => item.id === data.id)
-                      ? imageFavoriteSelected
-                      : imageFavoriteUnselected
+                      ? `.${imageFavoriteSelected}`
+                      : `.${imageFavoriteUnselected}`
                   }
                   alt="Corazon de favoritos"
                 />

@@ -28,3 +28,5 @@ Siga estos pasos para instalar la aplicación en su entorno local:
 
 5. Se han subido las variables de entorno, el archivo .env.local, debido a que son necesarias para que el proyecto funcione.
    En circunstancias normales y reales, este archivo nunca se sube junto con el proyecto, debido a que las variables de entorno es una información sensible, debiendo cada usuario, crear manualmente el archivo .env, e incluir dichas variables, una vez clonado el proyecto.
+
+6. Hacer una búsqueda de src en el proyecto, en los archivos donde se encuentre una anotación respecto a la etiqueta SRC, hacer los cambios correspondientes para su visualización en local, o para hacer la build para subir a producción.

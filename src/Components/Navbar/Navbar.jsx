@@ -23,15 +23,19 @@ export const Navbar = ({ setSearchText = null }) => {
         }
         className="logo-marbel"
       >
-        <img src={`.${marvelLogo}`} alt="" className="image-logo" />
+        <img src={`${marvelLogo}`} alt="" className="image-logo" />
       </div>
       <div className="favorite-navbar">
         <img
           onClick={() =>
             showFavorites(setState, state, setSearchText, navigate)
           }
-          src={`${resultImage}`}
-          alt=""
+          // ASI PARA LOCAL
+          // src={resultImage}
+
+          // ASI PARA PRO
+          src={`.${resultImage}`}
+          alt="Imagen Corazón rojo para favoritos"
           className="favorite"
         />
         <p>{numbersFavorites}</p>
