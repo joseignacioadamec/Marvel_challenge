@@ -23,7 +23,11 @@ export const Navbar = ({ setSearchText = null }) => {
         }
         className="logo-marbel"
       >
-        <img src={`${marvelLogo}`} alt="" className="image-logo" />
+        {/* // ASI PARA LOCAL */}
+        {/* <img src={marvelLogo} alt="" className="image-logo" /> */}
+
+        {/* // ASI PARA PRO */}
+        <img src={`.${marvelLogo}`} alt="" className="image-logo" />
       </div>
       <div className="favorite-navbar">
         <img
