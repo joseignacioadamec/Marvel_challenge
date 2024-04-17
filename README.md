@@ -20,7 +20,7 @@ Siga estos pasos para instalar la aplicación en su entorno local:
 
 1. Instalación de Dependencias: Ejecute `npm install`. Este comando descargará todas las dependencias necesarias para el proyecto en el directorio actual.
 
-2. Iniciar la Aplicación en modo desarrollo: Ejecute `npm run dev`. Con este comando, la aplicación está configurada para arrancar localmente y automáticamente en http://127.0.0.1:3000/
+2. Iniciar la Aplicación en modo desarrollo: Ejecute `npm run dev`. Con este comando, la aplicación está configurada para arrancar localmente y automáticamente en http://localhost:5174/
 
 3. Aplicación en modo producción: Ejecute `npm run build`. Para realizar la traspilación, optimización, empaquetado y generación de archivos estáticos, una vez transpilado el proyecto. Se puede probar si la transpilación ha sido correcta, ejecutando `npx http-server`, se ejecutará en http://192.168.1.33:8080
 

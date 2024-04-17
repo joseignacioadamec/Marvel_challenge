@@ -20,12 +20,7 @@ export default defineConfig(({ mode }) => {
       css: true,
     },
     build: {
-      minify: isProduction,
-      rollupOptions: {
-        input: {
-          main: './index.html',
-        },
-      },
+      assetsInlineLimit: 0,
     },
   }
 })

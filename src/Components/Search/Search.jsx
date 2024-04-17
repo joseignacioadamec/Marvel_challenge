@@ -39,7 +39,7 @@ export const Search = ({ searchText, setSearchText }) => {
       <form>
         <div className="search-character">
           <div className="icon-search">
-            <img src={iconSearch} alt="" />
+            <img src={`.${iconSearch}`} alt="Icono de lupa" />
           </div>
           <input
             className="custom-input"
